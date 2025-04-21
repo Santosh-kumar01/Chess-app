@@ -9,7 +9,7 @@ let playerRole = null;
 const getPieceUnicode = (piece) => {
   const symbols = {
     w: { p: "♙", r: "♖", n: "♘", b: "♗", q: "♕", k: "♔" },
-    b: { p: "♟", r: "♜", n: "♞", b: "♝", q: "♛", k: "♚" }
+    b: { p: "♟", r: "♜", n: "♞", b: "♝", q: "♛", k: "♚" },
   };
   return symbols[piece.color][piece.type];
 };
@@ -21,7 +21,10 @@ const renderBoard = () => {
   board.forEach((row, rowIndex) => {
     row.forEach((square, colIndex) => {
       const squareEl = document.createElement("div");
-      squareEl.classList.add("square", (rowIndex + colIndex) % 2 === 0 ? "light" : "dark");
+      squareEl.classList.add(
+        "square",
+        (rowIndex + colIndex) % 2 === 0 ? "light" : "dark"
+      );
       squareEl.dataset.row = rowIndex;
       squareEl.dataset.col = colIndex;
 
@@ -52,7 +55,7 @@ const renderBoard = () => {
         if (draggedPiece && sourceSquare) {
           const targetSquare = {
             row: parseInt(e.currentTarget.dataset.row),
-            col: parseInt(e.currentTarget.dataset.col)
+            col: parseInt(e.currentTarget.dataset.col),
           };
           handleMove(sourceSquare, targetSquare);
         }
@@ -73,7 +76,7 @@ const handleMove = (source, target) => {
   const move = {
     from: `${String.fromCharCode(97 + source.col)}${8 - source.row}`,
     to: `${String.fromCharCode(97 + target.col)}${8 - target.row}`,
-    promotion: "q"
+    promotion: "q",
   };
   socket.emit("move", move);
 };

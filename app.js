@@ -31,13 +31,12 @@ io.on("connection", (uniquesocket) => {
   } else {
     uniquesocket.emit("spectatorRole");
   }
-
   uniquesocket.emit("boardstate", chess.fen());
 
   uniquesocket.on("move", (move) => {
     try {
       const currentTurn = chess.turn(); // 'w' or 'b'
-      const playerId = currentTurn === 'w' ? players.white : players.black;
+      const playerId = currentTurn === "w" ? players.white : players.black;
 
       if (uniquesocket.id !== playerId) return;
 
