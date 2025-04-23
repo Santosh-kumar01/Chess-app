@@ -9,72 +9,74 @@
 
 ---
 
-## 🖥️ System Overview
+## 🖥️ App Overview ♛ 
 
-**Chess-app is a real-time multiplayer web application that brings the classic strategy game of chess to your browser. It is designed for two players to play live, taking alternating turns, with full enforcement of official chess rules and game conditions.*before they escalate*.
+Chess-app is a real-time multiplayer web application that brings the classic strategy game of chess to your browser. It is designed for two players to play live, taking alternating turns, with full enforcement of official chess rules and game conditions
 
 Designed with the complexities of large-scale offline events in mind, it centralizes live feedback, analyzes emotions across multiple platforms, and provides actionable insights — ensuring every concern is seen, heard, and resolved.
 
 --
 
-## 📊 Why We Built This
+## 🖥️ System Overview
 
-During high-energy events, it's easy for attendee discomfort or feedback to get lost in the chaos.
+🕰️ Real-Time Gameplay: Built with Express.js, and Socket.IO, the app allows two players to join and play against each other live.
 
-> 🎯 Our mission: **Build a solution that lets organizers respond to problems in real time — not after the event is over.**
+🤳 Drag-and-Drop Interface: Players can move pieces interactively using a smooth drag-and-drop system built with HTML, CSS, and JavaScript. 
 
-So, we created a system that:
-- Listens to attendees across multiple digital channels
-- Analyzes what’s being said with AI
-- Visualizes trends, crowd behavior, and alerts instantly
-- Helps organizers stay ahead of potential issues — *not behind them*
+♟️ Game Engine: Powered by Chess.js, ensuring all chess logic and move validation are handled correctly. 
+
+🙍🏻‍♂️ Player Roles: When two users join, they are automatically assigned roles — White or Black. 
+
+📱 Live Synchronization: All board states and moves are updated in real-time for both players. 
+
+ -- 
+
+## 📜 Game Rules and Logic
+	•	♟️ Two Players Only: The game starts when both White and Black players are connected.
+	•	🔄 Turn-Based System: Players take alternating turns; only the active player can move.
+ 	•	✅ Move Validation: Every move is validated using chess.js to ensure it follows standard chess rules.
+
+--
+
+##	🛡️ Game Conditions:
+
+Check:- The king is in danger but can escape. 
+
+
+Checkmate:- The king is under threat and cannot escape — the game ends.
+
+Draw:- Detected based on stalemate, insufficient material, repetition, or the 50-move rule.
 
 ---
 
-## 🧩 Core Features
+## 🚀 Core Features
 
 | Feature | Description |
 |--------|-------------|
-| 🔍 **Live Sentiment Aggregation** | Real-time tracking of attendee emotions from event apps, Q&A platforms, and social media. |
-| 🗺️ **Venue Heatmaps** | Visualizes crowd density and discomfort zones across physical event locations. |
-| 🚨 **Automated Alerts** | AI detects spikes in negative sentiment or crowd issues and triggers smart alerts. |
-| 🤖 **AI Chatbot + Feedback Loop** | Offers attendees instant support and routes unresolved issues to the dashboard. |
-| 📈 **Organizer Dashboard** | Visual, real-time analytics dashboard to drive fast, informed decision-making. |
+|  🎮 **Real-Time Multiplayer** | Play live with another player with instant move synchronization using Socket.IO.|
+|  🔄 **Turn-Based System** | Players take alternating turns; only one can move at a time. |
+|  ♟️ **Drag-and-Drop Interface** | Move pieces smoothly using an intuitive drag-and-drop UI. |
+|  ✅ **Rule Validation** | All moves are validated using chess.js to ensure legal play. |
+|  🏁 **Endgame Detection** | Automatically detects check, checkmate, stalemate, and draw scenarios. |
+|  👥 **Automatic Role Assignment** | Players are automatically assigned as White or Black when they join. |
+|  📱 **Responsive Design** | Fully responsive layout for both desktop and mobile browsers. |
 
 ---
 
 ## 🛠️ Built With
 
-| Category | Stack |
+| Technology| Purpose |
 |---------|--------|
-| **Frontend** | Typescript, Next.js, React, Redux Toolkit, TailwindCSS |
-| **Backend** | Typescript, Node.js, Express.js |
-| **Database** | MongoDB |
-| **AI/ML** | Python, RoBERTa, TensorFlow, Scikit-learn |
-| **Real-Time** | Kafka, WebSockets |
-| **DevOps** | Docker, AWS (S3), Google Cloud Platform (GCP) |
+| **Express.js** | Backend framework for handling routes, game logic, and server setup |
+| **TypeScript** | Type-safe language for writing clean, maintainable backend and frontend code |
+| **Socket.IO** | Enables real-time communication between players for synchronized gameplay |
+| **Tailwind CSS** | Utility-first CSS framework for building a responsive and modern UI |
+| **Render** | Cloud platform used for deploying the full-stack application |
+
 
 ---
 
-## 🧠 Machine Learning Modules
 
-- **RoBERTa-based Sentiment Classifier**  
-  Classifies sentiment into `Positive`, `Neutral`, `Negative` using real-world event feedback data.
-
-- **Crowd Event Analyzer**  
-  Uses spatiotemporal clustering and NLP to detect localized issues at venue zones.
-
-- **Trend Spike Detector**  
-  Finds sudden increases in repeated keywords or concerns, and prioritizes them on the dashboard.
-
----
-
-## 🎥 Project Demo
-
-> 📽️ *Coming Soon:* [YouTube Demo Video](#)  
-> 🔗 **Live Preview:** [Soon](#)
-
----
 
 ## 🖼️ UI Snapshots
 
@@ -88,16 +90,13 @@ So, we created a system that:
 
 ```bash
 # Clone the repository
-git clone https://github.com/deepak-raaaz/404-not-found-hackfest-2025
+git clone https://github.com/Santosh-kumar01/Chess-app.git
 
 # Navigate to project directory
-cd 404-not-found-hackfest-2025
+cd chess
 
 # Install server dependencies
 cd server && npm install
 
-# Install frontend dependencies
-cd ../client && npm install
-
-# Start backend & frontend (using concurrently or separate terminals)
-npm run dev
+# Start backend Server running
+npx nodemon
