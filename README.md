@@ -3,19 +3,19 @@
 
 <!-- <img src="https://your-logo-url-or-banner.png" width="80%" /> -->
 
-# ♕♟♞ Chess-app ♟♛♘
+# ♟️ Chess-app – Real-Time app Chess Game
 
 </div>
 
 ---
 
-## ✨ Overview
+## 🖥️ System Overview
 
-**Event Sentinel** is a real-time, AI-driven event monitoring platform that empowers organizers to detect attendee issues, sentiment shifts, and crowd dynamics *before they escalate*.
+**Chess-app is a real-time multiplayer web application that brings the classic strategy game of chess to your browser. It is designed for two players to play live, taking alternating turns, with full enforcement of official chess rules and game conditions.*before they escalate*.
 
 Designed with the complexities of large-scale offline events in mind, it centralizes live feedback, analyzes emotions across multiple platforms, and provides actionable insights — ensuring every concern is seen, heard, and resolved.
 
----
+--
 
 ## 📊 Why We Built This
 
