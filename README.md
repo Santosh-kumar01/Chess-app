@@ -68,21 +68,11 @@ Draw:- Detected based on stalemate, insufficient material, repetition, or the 50
 | Technology| Purpose |
 |---------|--------|
 | **Express.js** | Backend framework for handling routes, game logic, and server setup |
-| **TypeScript** | Type-safe language for writing clean, maintainable backend and frontend code |
+| **javaScript** | Type-safe language for writing clean, maintainable backend and frontend code |
 | **Socket.IO** | Enables real-time communication between players for synchronized gameplay |
 | **Tailwind CSS** | Utility-first CSS framework for building a responsive and modern UI |
 | **Render** | Cloud platform used for deploying the full-stack application |
 
-
----
-
-
-
-## 🖼️ UI Snapshots
-
-| User Dashboard | Organizer Dashboard |
-|----------|--------|
-| ![User Dashboard](./screenshots/user-dashboard.jpeg) | ![Heatmap](./screenshots/organizer-dashboard.jpeg) |
 
 ---
 
@@ -94,9 +84,6 @@ git clone https://github.com/Santosh-kumar01/Chess-app.git
 
 # Navigate to project directory
 cd chess
-
-# Install server dependencies
-cd server && npm install
 
 # Start backend Server running
 npx nodemon
