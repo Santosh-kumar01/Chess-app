@@ -2,9 +2,9 @@
 
 <!-- <img src="https://your-logo-url-or-banner.png" width="80%" /> -->
 
-# 🚨 AI-Powered Multichannel Sentiment Monitoring & Real-Time Issue Detection for Events
+# ♕♟ Chess-app ♟♛
 
-📍 *Secured 5th rank in our PS @ Hackfest 2025 – IIT ISM Dhanbad*
+
 
 </div>
 
